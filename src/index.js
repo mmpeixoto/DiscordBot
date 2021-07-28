@@ -5,8 +5,7 @@ const client = new Client();
 
 const reactionRoleManager = new ReactionRoleManager(client, {
   storage: true,
-  mongoDbLink:
-    "mongodb+srv://mefiubot:19942811a@cluster0.r1tic.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", // See here to see how setup mongoose: https://github.com/IDjinn/Discord.js-Collector/blob/master/examples/reaction-role-manager/Note.md
+  mongoDbLink: process.env.MONGO_URI,
 });
 
 client.on("ready", () => {
